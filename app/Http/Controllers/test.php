@@ -52,4 +52,10 @@ class test extends Controller
         $user = User::findOrFail($id);
         return view("test.users", ["user" => $user]);
     }
+
+    public function suivre($id){
+        $user = User::findOrFail($id);
+        Auth::user()->IfollowThem()->toggle($id);
+        return back();
+    }
 }

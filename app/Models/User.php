@@ -45,4 +45,12 @@ class User extends Authenticatable
     public function songs() {
         return $this->hasMany("App\Models\song", "user_id");
     }
+
+    public function IfollowThem(){
+        return $this -> belongsToMany('App\Models\User', "connection", "from_id", "to_id");
+    }
+
+    public function theyfollowMe(){
+        return $this -> belongsToMany('App\Models\User', "connection", "to_id", "from_id");
+    }
 }
