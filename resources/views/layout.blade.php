@@ -6,8 +6,14 @@
         <link href="/css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header><h1>Mon application musical</h1>
-       
+        <header>
+            <img style="padding:30px 30px;" src="/images/Fichier 1.png">
+        <div class="menu">
+        <h1>Accueil</h1>
+        <h1>Connexion</h1>
+        <h1>Publier</h1>
+        <h1>Profil</h1>
+        </div>
         </header>
 
         <nav class="mainNav">
@@ -37,6 +43,8 @@
         <h2>La musique de ce génie</h2>
         
             @yield("content") 
+            <h2 style="color:white">Reprendre la lecture</h2>
+            <h2 style="color:white">Mes abonnements</h2>
         </main>     
     </body>   
     <script src="/js/jquery.js"></script>
