@@ -43,6 +43,8 @@
         
         
             @yield("content") 
+            <h2 style="color:white">Reprendre la lecture</h2>
+            <h2 style="color:white">Mes abonnements</h2>
         </main>     
     </body>   
     <script src="/js/jquery.js"></script>
