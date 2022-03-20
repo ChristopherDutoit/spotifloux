@@ -1,0 +1,15 @@
+.songs__list h3{
+    color: white;
+}
+
+.songs__list ul{
+display: flex;
+overflow-x: scroll;
+
+}
+
+.songs__list li{
+list-style: none;
+width: 10%;
+margin: 0 2.5%;
+}

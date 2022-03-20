@@ -6,15 +6,13 @@
         <link href="/css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header><h1>Mon application musical</h1>
-       
-        </header>
-
+        <header>
+        <img src="/img/logo.png">    
+        <h1>Ostound</h1>
         <nav class="mainNav">
             <a href="/">Home</a>
             <a href="/nouvelle/chanson">Nouvelle chanson</a>
             @auth 
-            Bonjour {{Auth ::user()->name}}
             <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -28,13 +26,21 @@
             <a href="/login">Login </a>
             <a href="/register">register</a>
             @endauth
+            
             <a href="/about">About Me</a>
-        </nav> 
+        </nav>
+       
+        </header>
+        <div class="Auth"> 
+  
+            </div>
+
+         
 
         <main>
         <audio id="lecteur" controls>
         </audio>
-        <h2>La musique de ce génie</h2>
+        
         
             @yield("content") 
         </main>     
