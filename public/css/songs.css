@@ -13,10 +13,11 @@
 .songs__list ul{
 display: flex;
 overflow-x: scroll;
+padding: 30px 0;
 
 }
 
-.songs__list div    {
+.songs__list li   {
 list-style: none;
 width: 25%;
 margin: 0 2.5%;
@@ -26,3 +27,19 @@ background-color: #242038;
 .songs__list img {
  width: 100%;
     }
+
+
+    ul::-webkit-scrollbar{
+        background-color: #8d86c9;
+    }
+   
+    
+      ul::-webkit-scrollbar-thumb {
+        background: white; 
+        border-radius: 10px;
+      }
+    
+      ul::-webkit-scrollbar-thumb:hover {
+        background: rgb(151, 151, 151); 
+      }
+  

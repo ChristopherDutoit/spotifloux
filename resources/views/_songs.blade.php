@@ -4,13 +4,13 @@
 <ul>
     @foreach($songs as $song)
     
-
-    <div>
+    <li>
+    
         <img src="/img/image2.png"/>
         <a href="#" class="song" data-file="{{$song->url}}">{{$song['title']}}</a>
         
         Posté par <a href="/users/{{$song->user->id}}"> {{$song->user->name}}</a>
-</div>
+</li>   
     @endforeach
 </ul>
 </div>
