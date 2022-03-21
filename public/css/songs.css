@@ -1,5 +1,13 @@
+
+.songs__list{
+    width: 95%;
+    margin: 5% auto;
+}
 .songs__list h3{
     color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+
 }
 
 .songs__list ul{
@@ -8,8 +16,13 @@ overflow-x: scroll;
 
 }
 
-.songs__list li{
+.songs__list div    {
 list-style: none;
-width: 10%;
+width: 25%;
 margin: 0 2.5%;
+background-color: #242038;
 }
+
+.songs__list img {
+ width: 100%;
+    }
