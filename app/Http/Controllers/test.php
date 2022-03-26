@@ -18,7 +18,9 @@ class test extends Controller
         //echo $s->title;die(1); // DELETE from songs where id=1
         
         //modifier
-        return view("test.index", ["songs"=>$songs]);
+
+        $lastSongs = Song::orderBy('created_at', 'desc')->take(10)->get();
+        return view("test.index", ["lastSongs"=>$lastSongs]);
     }
     public function about(){
         return view("test.about");

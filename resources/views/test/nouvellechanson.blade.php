@@ -16,7 +16,7 @@
     <br>
     <input type="file" required  name="song"/>
     <br>
-    <input type="number" required min="0" max="10" placeholder='notes' value="{{old('note')}}"/>
+    <input type="number" required min="0" max="10" placeholder='notes' value="{{old('note')}}" name="note"/>
     <br>
     <input type="submit" />
 </form>
