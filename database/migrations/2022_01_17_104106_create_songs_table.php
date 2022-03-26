@@ -18,6 +18,7 @@ class CreateSongsTable extends Migration
             
             $table->string("title");
             $table->string("url");
+            $table->string("thumbnail_url");
             $table->integer("note")->nullable();
             $table->integer("user_id");
             $table->timestamps();

@@ -32,19 +32,22 @@ class DatabaseSeeder extends Seeder
         
         DB::table('songs')->insert([
             'title' => Str::random(10),
-            'url' => "https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_2MG.mp3",
+            'url' => "https://file-examples.com/storage/fe037418ca623f4ca9d3a0c/2017/11/file_example_MP3_700KB.mp3",
+            'thumbnail_url' =>  "/img/image2.png",
             'note' =>rand(0,20),
             'user_id' => 1
         ]);
         DB::table('songs')->insert([
             'title' => Str::random(10),
-            'url' => "https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3",
+            'url' => "https://file-examples.com/storage/fe037418ca623f4ca9d3a0c/2017/11/file_example_MP3_700KB.mp3",
+            'thumbnail_url' =>  "/img/image2.png",
             'note' =>rand(0,20),
             'user_id' => 1
         ]);
         DB::table('songs')->insert([
             'title' => Str::random(10),
-            'url' => "https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3",
+            'url' => "https://file-examples.com/storage/fe037418ca623f4ca9d3a0c/2017/11/file_example_MP3_700KB.mp3",
+            'thumbnail_url' =>  "/img/image2.png",
             'note' =>rand(0,20),
             'user_id' => 2
         ]);

@@ -37,12 +37,17 @@ class test extends Controller
                 'title' =>'required|max:50|min:3',
                 'note' =>'required|integer|max:10|min:0',
                 'song' =>'required|mimes:ogg,mp3',
+                'thumbnail' =>'required|mimes:jpg,jpeg,png',
             ]);
-        $name = $request->file('song')->hashName();
-        $request->file('song')->move("songs/".Auth::id(), $name);
+        $songname = $request->file('song')->hashName();
+        $request->file('song')->move("songs/".Auth::id(), $songname);
+
+        $thumbnailname = $request->file('thumbnail')->hashName();
+        $request->file('thumbnail')->move("img/".Auth::id(), $thumbnailname);
 
         $s =new Song();
-        $s->url = "/songs/".Auth::id()."/$name";
+        $s->url = "/songs/".Auth::id()."/$songname";
+        $s->thumbnail_url = "/img/".Auth::id()."/$thumbnailname";
         $s->title = $request->input("title");
         $s->note = $request->input("note");
         $s->user_id = Auth::id();
