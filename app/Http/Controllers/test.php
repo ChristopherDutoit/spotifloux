@@ -24,6 +24,17 @@ class test extends Controller
         $followSongs = Song::join('connection', 'connection.to_id', 'songs.user_id')->where('connection.from_id','like',Auth::id())->get();
         return view("test.index", ["lastSongs"=>$lastSongs, "followSongs"=>$followSongs]);
     }
+
+    public function destroy($id){
+        $user_id = Song::where('id', 'like', $id)->value('user_id');
+        if($user_id == Auth::id()){
+        DB::delete('delete from songs where id = ?',[$id]);
+        return redirect('/');
+        
+        }else{
+            return redirect('/');
+        }
+    }
     public function about(){
         return view("test.about");
     }
