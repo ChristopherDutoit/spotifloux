@@ -50,5 +50,47 @@ header{
         bottom: 0;
         width: 80%;
     }
-
+    .nouvelle{
+        color: white;
+        font-size: 45px;
+    }
+    .formulaire{
+        text-align: center;
+        margin-top: 200px;
+    }
+    .titre{
+        width: 377px;
+        height: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .fichier{
+        color: white;
+        font-size: 30px;
+    }
+    .miniature{
+        color: white;
+        font-size: 25px;
+    }
+    .file{
+        margin-bottom: 15px;
+    }
+    .ajout-miniature{
+        margin-bottom: 10px;
+    }
+    .note1{
+        color: white;
+        font-size: 20px;
+    }
+    .note{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .submit{
+        margin-top: 10px;
+        background-color: #8D86C9;
+        color: white;
+        border: 1px solid white;
+        font-size: 20px;
+    }
    
