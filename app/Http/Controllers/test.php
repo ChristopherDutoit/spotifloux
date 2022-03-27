@@ -89,7 +89,11 @@ class test extends Controller
             $total_row = $data->count();
             if($total_row > 0 ){
                 foreach($data as $row){
-                    $output .=  'song :'.$row->title;
+                    $output .='   <li>
+                                        <img src="'.$row->thumbnail_url.'"/>
+                                        <a href="#" class="song" data-file='.$row->url.'>'.$row->title.'</a>
+                                        Posté par <a href="/users/'.$row->user_id.'"> je sais pas comment récup le nom</a>
+                                </li>   ';
                 }
             }else{
                 $output = 'no data found';

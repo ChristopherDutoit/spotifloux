@@ -2,7 +2,11 @@
 @section('content')
 <div class="searchform">
       <input type="text" name="search" id="search" class="form-control" placeholder="Search a song or an artist" />
-      <p id="result"></p>
+    </div>
+    <div class="songs__list">
+        <ul id='result'>
+        
+        </ul>
     </div>
     <script src="/js/jquery.js"></script>
 <script>
