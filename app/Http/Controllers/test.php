@@ -21,7 +21,8 @@ class test extends Controller
         //modifier
 
         $lastSongs = Song::orderBy('created_at', 'desc')->take(10)->get();
-        return view("test.index", ["lastSongs"=>$lastSongs]);
+        $followSongs = Song::join('connection', 'connection.to_id', 'songs.user_id')->where('connection.from_id','like',Auth::id())->get();
+        return view("test.index", ["lastSongs"=>$lastSongs, "followSongs"=>$followSongs]);
     }
     public function about(){
         return view("test.about");
