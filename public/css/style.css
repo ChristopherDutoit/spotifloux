@@ -93,4 +93,76 @@ header{
         border: 1px solid white;
         font-size: 20px;
     }
-   
+    .submit:hover{
+        background-color: white;
+        color: #8D86C9;
+    }
+    .card{
+        text-align: center;
+        margin: 270px;
+    }
+    .card-header{
+        font-size: 33px;
+        color: white;
+        margin-bottom: 10px;
+    }
+    #email1{
+        color: white;
+        font-size: 20px;
+    }
+    #email{
+        width: 377px;
+        height: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #password1{
+        color: white;
+        font-size: 20px;
+    }
+    #password{
+        width: 377px;
+        height: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #remember{
+        color: white;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    #submit{
+        margin-top: 10px;
+        background-color: #8D86C9;
+        color: white;
+        border: 1px solid white;
+        font-size: 20px;
+    }
+    #submit:hover{
+        background-color: white;
+        color: #8D86C9;
+    }
+    #Name{
+        color: white;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    #Name2{
+        width: 377px;
+        height: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #password-confirm1{
+        color: white;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #password-confirm{
+        width: 377px;
+        height: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
