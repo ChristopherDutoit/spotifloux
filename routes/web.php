@@ -25,4 +25,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/users/{id}',[Test::class, "users"]) -> where("id", "[0-9]+");
 Route::get('/suivre/{id}', [Test::class, "suivre"]) -> where("id", "[0-9]+")->middleware('auth');
+Route::get('/search', [Test::class, "searchPage"]);
+Route::get('/search/action', [Test::class, "searchAction"])->name('test.searchAction');
+
 

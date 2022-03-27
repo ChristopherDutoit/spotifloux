@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\test;
+use DB;
 
 
 class test extends Controller 
@@ -64,5 +65,43 @@ class test extends Controller
         $user = User::findOrFail($id);
         Auth::user()->IfollowThem()->toggle($id);
         return back();
+    }
+
+    public function searchPage(){
+        return view("test.searchPage");
+    }
+
+    public function searchAction(Request $request){
+        if($request->ajax()){
+            $output ='';
+            $query = $request->get('query');
+            if($query !=''){
+                $data = DB::table('songs')
+                ->where('title', 'like', '%'.$query.'%')
+                ->orderBy('id', 'desc')
+                ->get();
+            }else{
+                $data = DB::table('songs')
+                ->orderBy('id', 'desc')
+                ->get();
+            }
+
+            $total_row = $data->count();
+            if($total_row > 0 ){
+                foreach($data as $row){
+                    $output .=  'song :'.$row->title;
+                }
+            }else{
+                $output = 'no data found';
+            }
+            
+            $data = array(
+                'table_data' => $output,
+                'total_data' => "1",
+            );
+
+            echo json_encode($data);
+
+        }
     }
 }

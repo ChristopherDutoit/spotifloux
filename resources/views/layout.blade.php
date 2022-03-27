@@ -11,6 +11,7 @@
         <h1>Ostound</h1>
         <nav class="mainNav">
             <a href="/">Home</a>
+            <a href="/search">Search</a>
             <a href="/nouvelle/chanson">Nouvelle chanson</a>
             @auth 
             <a class="dropdown-item" href="{{ route('logout') }}"
