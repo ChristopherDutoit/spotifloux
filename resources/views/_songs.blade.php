@@ -7,9 +7,9 @@
     <li>
     
         <img src="{{$song->thumbnail_url}}"/>
-        <a href="#" class="song" data-file="{{$song->url}}">{{$song['title']}}</a>
+        <div class="titre-musique"><a href="#" class="song" data-file="{{$song->url}}">{{$song['title']}}</a></div>
         
-        Posté par <a href="/users/{{$song->user->id}}"> {{$song->user->name}}</a>
+        <p class="poste">Posté par<p> <a href="/users/{{$song->user->id}}"> {{$song->user->name}}</a>
 </li>   
     @endforeach
 </ul>
