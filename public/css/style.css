@@ -102,7 +102,7 @@ header{
     }
     .card{
         text-align: center;
-        margin: 270px;
+        padding: 270px;
     }
     .card-header{
         font-size: 33px;
