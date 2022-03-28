@@ -20,10 +20,16 @@ class test extends Controller
         //echo $s->title;die(1); // DELETE from songs where id=1
         
         //modifier
-        $playlists = Playlist::where('user_id', 'like', Auth::id())->get();
+        
         $lastSongs = Song::orderBy('created_at', 'desc')->take(10)->get();
+
+        if(Auth::id()){
+        $playlists = Playlist::where('user_id', 'like', Auth::id())->get();
         $followSongs = Song::join('connection', 'connection.to_id', 'songs.user_id')->where('connection.from_id','like',Auth::id())->get();
         return view("test.index", ["lastSongs"=>$lastSongs, "followSongs"=>$followSongs, "playlists"=>$playlists]);
+        }else{
+            return view("test.index", ["lastSongs"=>$lastSongs]);
+        }
     }
 
     public function destroy($id){
