@@ -1,7 +1,7 @@
 
 .songs__list{
     width: 95%;
-    margin: 5% auto;
+    padding: 5% auto;
     position: relative;
 }
 .songs__list h3{
@@ -12,11 +12,9 @@
 }
 
 .songs__list ul{
-
 overflow-x: scroll;
-padding: 30px 0;
+padding: 130px 0;
 /*white-space: nowrap;*/
-
 }
 
 .songs__list li   {
@@ -63,7 +61,6 @@ text-align: center;
   text-align: center;
   width: 400px;
   height: 75px;
-  position: absolute;
   left: 500px;
   margin-top: 10px;
 }
