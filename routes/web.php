@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", [test::class, "index"]);
+Route::get("/home", [test::class, "index"]);
 Route::get("/about", [test::class, "about"]);
 Route::get("/article/{id}", [test::class, "article"])->where("id","[0-9]+");
 
@@ -22,7 +23,6 @@ Route::post("/chanson/store", [Test::class, "storechanson"])->middleware('auth')
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/users/{id}',[Test::class, "users"]) -> where("id", "[0-9]+");
 Route::get('/suivre/{id}', [Test::class, "suivre"]) -> where("id", "[0-9]+")->middleware('auth');
 Route::get('/search', [Test::class, "searchPage"]);

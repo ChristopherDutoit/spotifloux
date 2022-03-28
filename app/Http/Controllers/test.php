@@ -111,7 +111,7 @@ class test extends Controller
                     $output .='   <li>
                                         <img src="'.$row->thumbnail_url.'"/>
                                         <a href="#" class="song" data-file='.$row->url.'>'.$row->title.'</a>
-                                    
+
                                 </li>   ';
                 }
             }else{
@@ -147,9 +147,9 @@ class test extends Controller
 }
 
 public function playlists($id){
-
+    $playlist= playlist::where('id', 'like', $id);
     $songs = Song::join('playlist_song', 'playlist_song.song_id', 'songs.id')->where('playlist_song.id','like',$id)->get();
-    return view("test.showPlaylist", ["id" => $id,"songs"=>$songs]);
+    return view("test.showPlaylist", ["id" => $id,"songs"=>$songs, "playlist" => $playlist]);
 
 }
 }

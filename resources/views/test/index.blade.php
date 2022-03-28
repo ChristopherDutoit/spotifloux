@@ -9,9 +9,11 @@
 @Auth
 @include("_songs", ["songs" =>$followSongs, "type" => "Mes abonnements"])
 <h1 class="auth">Mes Playlists</h1>
+<div class="playlist" style='height:200px;'>
 @foreach($playlists as $playlist)
-<a href="/playlist/{{$playlist->id}}">{{$playlist -> title}}</a>
+<a style ="color : white; font-size:25px" href="/playlist/{{$playlist->id}}">{{$playlist -> title}}</a>
 @endforeach
+</div>
 @endAuth
  
 @endsection
