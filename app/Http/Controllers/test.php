@@ -111,7 +111,7 @@ class test extends Controller
                     $output .='   <li>
                                         <img src="'.$row->thumbnail_url.'"/>
                                         <a href="#" class="song" data-file='.$row->url.'>'.$row->title.'</a>
-                                        Posté par <a href="/users/'.$row->user_id.'"> je sais pas comment récup le nom</a>
+                                    
                                 </li>   ';
                 }
             }else{
