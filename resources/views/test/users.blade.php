@@ -4,9 +4,9 @@
 @Auth
     @if(Auth::id() != $user->id)
         @if(Auth::user()->IfollowThem->contains($user->id))
-        <a href="/suivre/{{$user->id}}">Suivi</a>
+        <a class="suivre" href="/suivre/{{$user->id}}">Suivi</a>
         @else
-        <a href="/suivre/{{$user->id}}">Suivre</a>
+        <a class="suivre" href="/suivre/{{$user->id}}">Suivre</a>
         @endif
     @endif
 @endAuth

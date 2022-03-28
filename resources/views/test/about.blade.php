@@ -1,4 +1,4 @@
 @extends('layout')
 @section('content')
-<p>About</p>
+<p class="About">About Christopher Dutois and Alexis Delanghe</p>
 @endsection
