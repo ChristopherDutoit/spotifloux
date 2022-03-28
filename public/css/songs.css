@@ -2,6 +2,7 @@
 .songs__list{
     width: 95%;
     margin: 5% auto;
+    position: relative;
 }
 .songs__list h3{
     color: white;
@@ -19,7 +20,7 @@ padding: 30px 0;
 
 .songs__list li   {
 list-style: none;
-width: 45%;
+width: 15%;
 margin: 0 2.5%;
 background-color: white;
 color: black;
@@ -30,7 +31,7 @@ padding: 10px 10px 10px 10px;
 text-align: center;
   }
   .songs__list li p  {
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
       }
 .songs__list img {
@@ -40,6 +41,28 @@ text-align: center;
 .titre-musique{
   text-align: center;
   font-size: 15px;
+}
+.Auteur{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+.liste-chanson{
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  list-style-type: none;
+}
+.searchform{
+  position: relative;
+}
+#search{
+  text-align: center;
+  width: 400px;
+  height: 75px;
+  position: absolute;
+  left: 500px;
+  margin-top: 10px;
 }
 /*#result li a{
 text-align: center;
