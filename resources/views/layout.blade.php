@@ -13,6 +13,7 @@
             <a href="/">Home</a>
             <a href="/search">Search</a>
             <a href="/nouvelle/chanson">Nouvelle chanson</a>
+            <a href="/nouvelle/playlist">Nouvelle Playlist</a>
             @auth 
             <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

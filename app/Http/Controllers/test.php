@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Song;
 use App\Models\User;
+use App\Models\Playlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\test;
@@ -19,10 +20,10 @@ class test extends Controller
         //echo $s->title;die(1); // DELETE from songs where id=1
         
         //modifier
-
+        $playlists = Playlist::where('user_id', 'like', Auth::id())->get();
         $lastSongs = Song::orderBy('created_at', 'desc')->take(10)->get();
         $followSongs = Song::join('connection', 'connection.to_id', 'songs.user_id')->where('connection.from_id','like',Auth::id())->get();
-        return view("test.index", ["lastSongs"=>$lastSongs, "followSongs"=>$followSongs]);
+        return view("test.index", ["lastSongs"=>$lastSongs, "followSongs"=>$followSongs, "playlists"=>$playlists]);
     }
 
     public function destroy($id){
@@ -120,4 +121,29 @@ class test extends Controller
 
         }
     }
+
+    public function nouvellePlaylist(){
+        return view("test.playlist");
+
+    }
+
+
+    public function createPlaylist(Request $request){
+        $request->validate([
+            'title' =>'required|max:50|min:3',
+        ]);
+
+    $p =new Playlist();
+    $p->title = $request->input("title");
+    $p->user_id = Auth::id();
+    $p->save();
+    return redirect("/");
+}
+
+public function playlists($id){
+
+    $songs = Song::join('playlist_song', 'playlist_song.song_id', 'songs.id')->where('playlist_song.id','like',$id)->get();
+    return view("test.showPlaylist", ["id" => $id,"songs"=>$songs]);
+
+}
 }

@@ -29,4 +29,12 @@ Route::get('/search', [Test::class, "searchPage"]);
 Route::get('/search/action', [Test::class, "searchAction"])->name('test.searchAction');
 Route::post("/delete/{id}", [Test::class, "destroy"])->where("id", "[0-9]+")->middleware('auth');
 
+Route::get("/nouvelle/playlist", [Test::class, "nouvellePlaylist"]);
+Route::post("/playlist/store", [Test::class, "createPlaylist"])->middleware('auth');
+
+Route::get('/playlist/{id}',[Test::class, "playlists"]) -> where("id", "[0-9]+");
+
+
+
+
 

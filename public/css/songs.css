@@ -12,20 +12,23 @@
 }
 
 .songs__list ul{
-display: flex;
+
 overflow-x: scroll;
 padding: 30px 0;
+white-space: nowrap;
 
 }
 
 .songs__list li   {
-list-style: none;
-width: 15%;
-margin: 0 2.5%;
-background-color: white;
-color: black;
-border-radius: 20px;
-padding: 10px 10px 10px 10px;
+  list-style: none;
+  width: 25%;
+  margin: 0 2.5%;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  display: inline-block;
+  height: auto;
 }
 .songs__list li a  {
 text-align: center;

@@ -51,7 +51,25 @@ class DatabaseSeeder extends Seeder
             'note' =>rand(0,20),
             'user_id' => 2
         ]);
+        DB::table('playlists')->insert([
+            'title' => "Ma super playlist",
+            'user_id' => "2"
+
+        ]);
+        DB::table('playlist_song')->insert([
+            'playlist_id' => "1",
+            'song_id' => "2"
+
+        ]);
+
+        DB::table('playlist_song')->insert([
+            'playlist_id' => "1",
+            'song_id' => "3"
+
+        ]);
     }
+
+    
 }
 
 ?>
